@@ -312,6 +312,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 #links-navbar a {
@@ -326,6 +327,48 @@ button {
 #links-navbar a:hover {
   transform: translateY(10%);
 }
+
+#pick-me-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  width: 15%;
+  height: 15%;
+}
+
+#pick-me-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--font-color2);
+  color: var(--font-color1);
+  width: 100%;
+  height: 70%;
+  border-radius: 20px;
+  border: 1px solid var(--background-color2);
+  font-size: 1.1rem;
+  transition: 0.1s linear;
+  text-align: center;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+#contact-btn:hover {
+  background-color: rgb(99, 13, 66);
+}
+
+#contact-btn:active {
+  background-color: #45567D;
+}
+
+
+
+
 
 /* =========================================================
    5. АДАПТИВНАЯ ВЁРСТКА
@@ -362,6 +405,11 @@ button {
   .project-element {
     width: 75%;
   }
+
+  #pick-me-btn {
+    width: 80%;
+    height: 10%;
+}
 
   /* ----------- Адаптивное бургер-меню ----------- */
 
@@ -442,6 +490,10 @@ button {
 
   .project-name,
   #portfile-link p {
+    font-size: 0.8rem;
+  }
+
+  #contact-btn span{
     font-size: 0.8rem;
   }
 }
