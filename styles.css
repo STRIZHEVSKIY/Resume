@@ -449,7 +449,7 @@ button {
   }
   
   #nav-list li {
-    height: f;
+    height: fit-content;
   }
 
   .burger {
