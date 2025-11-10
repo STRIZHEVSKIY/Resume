@@ -435,6 +435,7 @@ button {
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     row-gap: 35px;
     padding-top: 35px;
     background-color: var(--font-color2);
@@ -445,6 +446,10 @@ button {
 
   #nav-list li > a {
     font-size: 1.6rem;
+  }
+  
+  #nav-list li {
+    height: f;
   }
 
   .burger {
