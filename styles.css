@@ -354,6 +354,10 @@ button {
   text-align: center;
 }
 
+#contact-btn span{
+  font-size: 1.2rem;
+}
+
 .btn-hidden {
   display: none;
 }
