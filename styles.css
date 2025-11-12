@@ -105,41 +105,50 @@ h2 {
 
 /* ------------------ Бургер-меню ------------------ */
 
-#burger-toggle {
-  display: none;
-}
-
-.burger {
+.burger-btn {
   display: none;
   position: relative;
-  height: 25px;
-  width: 30px;
-  z-index: 2;
+  border: none;
+  background: none;
+  height: 40px;
+  width: 40px;
+  margin: 0 20px;
 }
 
-label::before,
-label::after,
-label span {
+.burger-btn span {
   position: absolute;
+  width: 30px;
   height: 3px;
-  width: 100%;
-  background: var(--font-color1);
-  transition: 0.3s;
+  background-color: var(--font-color1);
+  left: 5px;
 }
 
-label::after {
-  content: "";
-  top: 0;
+.burger-btn span:nth-child(1) {
+  transform: translateY(10px);
+  transition: transform 0.3s;
 }
 
-label::before {
-  content: "";
-  bottom: 0;
+.burger-btn span:nth-child(2) {
+  transition: opacity 0.3s;
 }
 
-label span {
-  top: 11px;
+.burger-btn span:nth-child(3) {
+  transform: translateY(-10px);
+  transition: transform 0.3s;
 }
+
+.header.open .burger-btn span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.header.open .burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .burger-btn span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
 
 /* =========================================================
    3. ОСНОВНАЯ СЕТКА И СЕКЦИИ
@@ -272,10 +281,6 @@ label span {
   border: none;
 }
 
-button {
-  background: none;
-  border: none;
-}
 
 .button:hover {
   background: var(--font-color2);
@@ -424,8 +429,6 @@ button {
     height: 10vh;
   }
 
- 
-
   #navbar {
     grid-column: 2 / span 1;
     justify-content: center;
@@ -456,30 +459,15 @@ button {
     height: fit-content;
   }
 
-  .burger {
+  .header.open #nav-list {
+    transform: translateX(100%);
+  }
+
+  .burger-btn {
     display: block;
-    position: absolute;
-    right: 30px;
+    z-index: 2;
   }
-
-  #burger-toggle:checked ~ label::after {
-    transform: rotate(45deg);
-    top: 12px;
-  }
-
-  #burger-toggle:checked ~ label::before {
-    transform: rotate(-45deg);
-    top: 12px;
-  }
-
-  #burger-toggle:checked ~ label span {
-    transform: rotate(-45deg);
-    top: 12px;
-  }
-
-  #burger-toggle:checked ~ #nav-list {
-    left: 0;
-  }
+  
 
   /* ----------- Мелкие адаптивные правки ----------- */
 
