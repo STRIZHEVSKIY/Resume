@@ -7,7 +7,10 @@ const linksNavBar = document.getElementById('links-navbar');
 const burgerBtn = document.getElementById('burger-btn');
 
 burgerBtn.addEventListener('click', () => {
-   document.getElementById('header').classList.toggle('open');
+  
+   setTimeout(() => {
+       document.getElementById('header').classList.toggle('open');
+       document.getElementById('nav-list').style.display = 'flex';}, 30)
 });
 
 pickMeButton.addEventListener('click', () => {
